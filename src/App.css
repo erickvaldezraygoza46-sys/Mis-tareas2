@@ -1,0 +1,373 @@
+/* Estilos generales para centrar y dar espacio */
+.App {
+  text-align: center;/* centrar texto */
+  min-height: 100vh;/* altura minima de pantalla completa */
+  background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);/* degradado suave */
+  display: flex;/* usar flexbox */
+  flex-direction: column;/* columna vertical */
+  align-items: center;/* centrar items horizontalmente */
+  justify-content: flex-start;/* alinear items al inicio verticalmente */
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;/* fuente moderna */
+}
+
+/* Animaciones suaves de entrada */
+.fade-in {
+  opacity: 0;/* iniciar invisible */
+  transform: translateY(30px);/* iniciar desplazado hacia abajo */
+  animation: fadeInUp 1s forwards;/* animación de entrada */
+}
+.delay-1 { animation-delay: 0.2s; }/* retraso de animación */
+.delay-5 { animation-delay: 1s; }/* retraso de animación */
+/* Definición de la animación */
+@keyframes fadeInUp {/* animación de desvanecimiento hacia arriba */
+  to {/* estado final */
+    opacity: 1;/* completamente visible */
+    transform: translateY(0);/* sin desplazamiento */
+  }/* estado final */
+}
+
+/* Encabezado moderno */
+.App-header {/* estilos del encabezado */
+  background: #282c34;/* fondo oscuro */
+  width: 100%;/* ancho completo */
+  padding: 3rem 1rem 2rem 1rem;/* espacio interno */
+  color: #fff;/* texto blanco */
+  border-radius: 0 0 24px 24px;/* bordes redondeados */
+  box-shadow: 0 4px 24px rgba(40,44,52,0.08);/* sombra suave */
+}/* estilos del encabezado */
+
+.App-header h1 {/* título principal */
+  font-size: 2.5rem;/* tamaño grande */
+  margin-bottom: 0.5rem;/* espacio inferior */
+  letter-spacing: 2px;/* espacio entre letras */
+}/* título principal */
+
+.App-header p {/* subtítulo */
+  font-size: 1.2rem;/* tamaño mediano */
+  margin: 0;/* sin margen */
+  color: #b3b9c5;/* color gris claro */
+}/* subtítulo *
+
+/* Contenedor de formularios */
+.form-container {/* estilos del contenedor de formularios */
+  background: #fff;/* fondo blanco */
+  margin: 2rem auto;/* margen superior e inferior */
+  padding: 2rem 1.2rem;/* espacio interno */
+  border-radius: 16px;/* bordes redondeados */
+  box-shadow: 0 2px 16px rgba(40,44,52,0.06);/* sombra suave */
+  max-width: 400px;/* ancho máximo */
+  width: 95%;/* ancho relativo */
+  display: flex;/* usar flexbox */
+  flex-direction: column;/* columna vertical */
+  align-items: center;/* centrar items horizontalmente */
+}/* Contenedor de formularios */
+
+.form-container h2 {/* título del formulario */
+  color: #282c34;/* color oscuro */
+  margin-bottom: 1.2rem;/* espacio inferior */
+  font-size: 1.4rem;/* tamaño mediano */
+}/* título del formulario */
+
+.form-container form {/* estilos del formulario */
+  width: 100%;/* ancho completo */
+  display: flex;/* usar flexbox */
+  flex-direction: column;/* columna vertical */
+  gap: 1rem;/* espacio entre elementos */
+}
+
+.form-container input {/* estilos de los campos de entrada */
+  padding: 0.8rem;/* espacio interno */
+  border: 1px solid #dbeafe;/* borde azul claro */
+  border-radius: 8px;/* bordes redondeados */
+  font-size: 1rem;/* tamaño de fuente */
+  outline: none;/* sin contorno */
+  transition: border 0.2s;/* transición suave */
+}
+.form-container input:focus {/* estilos al enfocar */
+  border-color: #61dafb;/* borde azul brillante */
+}/* estilos al enfocar */
+ /* Estilos de botones */
+.form-container button,/* estilos de botones */
+.main-btn {/* estilos de botones */
+  padding: 0.8rem 1.2rem;/* espacio interno */
+  background: #61dafb;/* fondo azul brillante */
+  color: #282c34;/* texto oscuro */
+  border: none;/* sin borde */
+  border-radius: 8px;/* bordes redondeados */
+  font-size: 1rem;/* tamaño de fuente */
+  cursor: pointer;/* cursor puntero */
+  margin-top: 0.5rem;/* margen superior */
+  transition: background 0.2s;/* transición suave */
+}
+.form-container button:hover,/* estilos al pasar el ratón */
+.main-btn:hover {/* estilos al pasar el ratón */
+  background: #21a1f3;/* fondo azul oscuro */
+  color: #fff;/* texto blanco */
+}
+
+.link-btn {/* estilos de botones tipo enlace */
+  background: none;/* sin fondo */
+border: none;/* sin borde */
+  color: #21a1f3;/* texto azul */
+  text-decoration: underline;/* subrayado */
+  cursor: pointer;/* cursor puntero */
+  font-size: 1rem;/* tamaño de fuente */
+  padding: 0;/* sin espacio interno */
+}
+/* Lista de tareas estilizada */
+.task-list {/* lista de tareas */
+  list-style: none;/* sin viñetas */
+  padding: 0;/* sin relleno */
+  margin: 1rem 0 0 0;/* margen superior */
+  width: 100%;/* ancho completo */
+}
+.task-list li {/* elementos de la lista */
+  background: #f1f5f9;/* fondo claro */
+  margin-bottom: 0.7rem;/* margen inferior */
+  padding: 0.7rem 1rem;/* espacio interno */
+  border-radius: 8px;/* bordes redondeados */
+  text-align: left;/* texto alineado a la izquierda */
+  box-shadow: 0 1px 4px rgba(40,44,52,0.03);/* sombra suave */
+  font-size: 1rem;/* tamaño de fuente */
+}
+
+
+/* Footer moderno con enlaces sociales */
+.App-footer {/* estilos del pie de página */
+  width: 100%;/* ancho completo */
+  background: #282c34;/* fondo oscuro */
+  color: #fff;/* texto blanco */
+  padding: 1.5rem 0 2rem 0;/* espacio interno */
+  border-radius: 24px 24px 0 0;/* bordes redondeados */
+  margin-top: auto;/* empujar al fondo */
+  box-shadow: 0 -2px 16px rgba(40,44,52,0.08);/* sombra suave */
+  font-size: 1rem;/* tamaño de fuente */
+}
+
+.App-footer a {/* estilos de enlaces */
+  color: #61dafb;/* color azul claro */
+  text-decoration: none;/* sin subrayado */
+  margin: 0 0.5rem;/* margen horizontal */
+  transition: color 0.2s;/* transición suave */
+}
+.App-footer a:hover {/* estilos al pasar el ratón */
+  color: #21a1f3;/* color azul oscuro */
+}
+
+.social-links {/* contenedor de enlaces sociales */
+  margin-top: 0.8rem;/* margen superior */
+}
+
+/* Responsive: se adapta a móviles */
+@media (max-width: 600px) {/* para pantallas pequeñas */
+  .App-header h1 {/* título principal */
+    font-size: 1.6rem;/* tamaño más pequeño */
+  }/* título principal */
+  .form-container {/* contenedor de formularios */
+    padding: 1rem 0.5rem;/* menos espacio interno */
+    max-width: 98vw;/* ancho casi completo */
+  }
+  .App-footer {/* pie de página */
+    font-size: 0.95rem;/* tamaño más pequeño */
+    padding: 1rem 0 1.5rem 0;/* menos espacio interno */
+  }
+}
+
+/*existing code*/
+
+.Projects-section {/* sección de proyectos */
+  background: #fff;/* fondo blanco */
+  margin: 2rem auto;/* margen superior e inferior */
+  padding: 2rem 1rem;/* espacio interno */
+  border-radius: 16px;/* bordes redondeados */
+  box-shadow: 0 2px 16px rgba(40,44,52,0.06);/* sombra suave */
+  max-width: 500px;/* ancho máximo */
+  width: 90%;/* ancho relativo */
+}
+.Projects-section h2 {/* título de la sección */
+  color: #282c34;/* color oscuro */
+  margin-bottom: 1.5rem;/* margen inferior */
+  font-size: 1.6rem;/* tamaño de fuente */
+}
+.Projects-section ul {/* lista de proyectos */
+  list-style: none;/* sin viñetas */
+  padding: 0;/* sin relleno */
+  margin: 0;/* sin margen */
+}
+.project-card {/* tarjeta de proyecto */
+  background: #f1f5f9;/* fondo claro */
+  margin-bottom: 1.2rem;/* margen inferior */
+  padding: 1rem 1.2rem;/* espacio interno */
+  border-radius: 10px;/* bordes redondeados */
+  box-shadow: 0 1px 6px rgba(40,44,52,0.03);/* sombra suave */
+  text-align: left;/* texto alineado a la izquierda */
+  transition: transform 0.2s, box-shadow 0.2s;/* transición suave */
+}
+.project-card:hover {/* estilos al pasar el ratón */
+  transform: translateY(-4px) scale(1.02);/* elevar y agrandar */
+  box-shadow: 0 4px 16px rgba(40,44,52,0.10);/* sombra más intensa */
+}
+/* Hover para tareas */
+.task-item {/* elementos de tarea */
+  background: #f1f5f9;/* fondo claro */
+  margin-bottom: 0.7rem;/* margen inferior */
+  padding: 0.7rem 1rem;/* espacio interno */
+  border-radius: 8px;/* bordes redondeados */
+  text-align: left;/* texto alineado a la izquierda */
+  box-shadow: 0 1px 4px rgba(40,44,52,0.03);/* sombra suave */
+  font-size: 1rem;/* tamaño de fuente */
+  transition: background 0.2s, box-shadow 0.2s;/* transición suave */
+}
+.task-item:hover {/* estilos al pasar el ratón */
+  background: #e0e7ff;/* fondo al pasar el ratón */
+  box-shadow: 0 2px 8px rgba(40,44,52,0.10);/* sombra más intensa */
+}
+
+
+
+/* Tema oscuro */
+body.dark-theme {/* tema oscuro */
+  background: #181a1b !important;/* fondo oscuro */
+}
+body.dark-theme .App {/* estilos del contenedor principal */
+  background: linear-gradient(135deg, #23272f 0%, #181a1b 100%);/* degradado oscuro */
+}
+body.dark-theme .App-header,/* estilos del encabezado */
+body.dark-theme .App-footer {/* estilos del pie de página */
+  background: #181a1b !important;/* fondo muy oscuro */
+  color: #fff !important;/* texto blanco */
+}
+body.dark-theme .form-container,/* estilos del contenedor de formularios */
+body.dark-theme .Projects-section {/* estilos de la sección de proyectos */
+  background: #23272f !important;/* fondo oscuro */
+  color: #fff !important;/* texto blanco */
+}
+body.dark-theme .project-card,/* estilos de la tarjeta de proyecto */
+body.dark-theme .task-item {/* estilos de los elementos de tarea */
+  background: #23272f !important;/* fondo oscuro */
+  color: #fff !important;/* texto blanco */
+}
+body.dark-theme .project-card:hover,/* estilos al pasar el ratón */
+body.dark-theme .task-item:hover {/* estilos al pasar el ratón */
+  background: #282c34 !important;/* fondo al pasar el ratón */
+}
+
+/* Menú desplegable (simple) */
+.dropdown {/* contenedor del menú desplegable */
+  display: flex;/* usar flexbox */
+  justify-content: center;/* centrar horizontalmente */
+  gap: 1rem;/* espacio entre elementos */
+  margin-top: 1rem;/* margen superior */
+}
+
+/* Carrusel de proyectos */
+.carousel {/* contenedor del carrusel */
+  display: flex;/* usar flexbox */
+  overflow-x: auto;/* permitir desplazamiento horizontal */
+  gap: 1rem;/* espacio entre elementos */
+  padding: 1rem;/* espacio interno */
+  scroll-snap-type: x mandatory;/* ajuste de desplazamiento */
+}
+
+.carousel-item {/* elementos del carrusel */
+  min-width: 200px;/* ancho mínimo */
+  scroll-snap-align: center;/* alineación al centro */
+  background: #f1f5f9;/* fondo claro */
+  padding: 1rem;/* espacio interno */
+  border-radius: 12px;/* bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);/* sombra */
+}
+
+.carousel-item img {/* imágenes del carrusel */
+  width: 100%;/* ancho completo */
+  height: 150px;/* altura fija */
+  object-fit: cover;/* cubrir área */
+  border-radius: 12px;/* bordes redondeados */
+}
+.carousel {/* contenedor del carrusel */
+  width: 100%;/* ancho completo */
+  height: 280px;/* altura fija */
+  overflow: hidden;/* ocultar desbordamiento */
+  position: relative;/* posición relativa */
+  margin-top: 20px;/* margen superior */
+}
+
+.carousel-track {/* pista del carrusel */
+  display: flex;/* usar flexbox */
+  gap: 20px;/* espacio entre elementos */
+  animation: move 12s linear infinite;/* animación */
+}
+
+.carousel-item {/* elementos del carrusel */
+  min-width: 220px;/* ancho mínimo */
+  padding: 10px;/* espacio interno */
+  border-radius: 12px;/* bordes redondeados */
+  background: #222;/* fondo oscuro */
+  color: #fff;/* texto blanco */
+  text-align: center;/* centrar texto */
+  box-shadow: 0 0 10px #000;/* sombra */
+}
+
+.carousel-item img {/* imágenes del carrusel */
+  width: 200px;/* ancho fijo */
+  height: 150px;/* altura fija */
+  border-radius: 10px;/* bordes redondeados */
+  object-fit: cover;/* cubrir área */
+}
+
+@keyframes move {/* animación de movimiento */
+  0% { transform: translateX(0); }/* inicio */
+  100% { transform: translateX(-60%); }/* fin */
+}
+
+.delete-btn {/* botón de eliminar */
+  margin-top: 10px;/* margen superior */
+  background: red;/* fondo rojo */
+  padding: 8px;/* espacio interno */
+  color: white;/* texto blanco */
+  border: none;/* sin borde */
+  width: 100%;/* ancho completo */
+  border-radius: 8px;/* bordes redondeados */
+  cursor: pointer;/* cursor puntero */
+}
+/* ===== CARRUSEL DE PROYECTOS ===== */
+
+.carousel {/* contenedor del carrusel */
+  display: flex;/* usar flexbox */
+  overflow-x: auto;/* permitir desplazamiento horizontal */
+  gap: 1rem;/* espacio entre elementos */
+  padding: 1rem;/* espacio interno */
+  scroll-snap-type: x mandatory;/* ajuste de desplazamiento */
+  scrollbar-width: none;/* ocultar scrollbar */
+}
+
+.carousel::-webkit-scrollbar {/* ocultar scrollbar para WebKit */
+  display: none;/* ocultar scrollbar */
+}
+
+.carousel-item {/* elementos del carrusel */
+  min-width: 220px;/* ancho mínimo */
+  background: #fff;/* fondo blanco */
+  border-radius: 12px;/* bordes redondeados */
+  padding: 1rem;/* espacio interno */
+  text-align: center;/* centrar texto */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);/* sombra */
+  scroll-snap-align: center;/* alineación al centro */
+}
+
+.carousel-img {/* imágenes del carrusel */
+  width: 100%;/* ancho completo */
+  height: 150px;/* altura fija */
+  object-fit: cover;/* cubrir área */
+  border-radius: 8px;/* bordes redondeados */
+}
+
+.delete-btn {/* botón de eliminar */
+  margin-left: 1rem;/* margen izquierdo */
+  background: #ff4d4d;/* fondo rojo */
+  color: white;/* texto blanco */
+  padding: 0.3rem 0.6rem;/* espacio interno */
+  border: none;/* sin borde */
+  border-radius: 6px;/* bordes redondeados */
+  cursor: pointer;/* cursor puntero */
+}
